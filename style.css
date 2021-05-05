@@ -1,0 +1,275 @@
+body {
+    font-size: 15px;
+  }
+  
+  button {
+    background: #ffc600;
+    border: 0;
+    padding: 10px 20px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .btnf{
+    display: inline-block;
+    background: yellow;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition:background 0.5s;
+    
+  }
+  
+  .btnf::before{
+    background: #048c63;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+.btnf:hover{
+  background:rgb(250, 87, 114);
+}
+.btn6::before{
+    width: 0;
+    height: 100%;
+}
+
+.btn6:hover::before{
+    width: 120%;
+}
+
+.btn2::before{
+    width: 100%;
+    height: 0%;
+}
+
+.btn2:hover::before{
+    height: 120%;
+}
+
+.btn3::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.btn3:hover::before{
+    height: 500%;
+}
+
+.btn4::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.btn4:hover::before{
+    height: 500%;
+}
+.btn5::before{
+  width: 0;
+  height: 100%;
+}
+
+.btn5:hover::before{
+  width: 120%;
+}
+
+  /* .wrapper */
+  
+  .wrapper {
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+  .top {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+      "hero hero cta1"
+      "hero hero cta2"
+  }
+  
+  .hero {
+    grid-area: hero;
+    min-height: 400px;
+    background: white url(images/back3.jfif);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; 
+  }
+
+  .hero > * {
+    background: var(--yellow);
+    padding: 10px;
+ 
+  }
+  
+  .cta {
+    background:white url(images/back2.jfif);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    transition: 1s;
+  }
+  
+  .cta:hover {
+    transform:scale(1.1) ;
+  }
+
+  .cta p {
+    margin: 0;
+  }
+  
+  .cta1 {
+    grid-area: cta1;
+  
+  }
+  
+  .cta2 {
+    grid-area: cta2;
+  }
+  
+  .price {
+    font-size: 60px;
+    font-weight: 300;
+    color:black;
+  }
+   
+  .name {
+    color:black;
+    font-size: 20px;
+  }
+  /* Navigation */
+  
+  .menu ul {
+    display: grid;
+    grid-gap: 10px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  
+  .menu a {
+    background: var(--yellow);
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  [aria-controls="menu-list"] {
+    display: none;
+  }
+  
+  /* Features! */
+  
+  .features {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .feature {
+    background: white;
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+    box-shadow: 0 0 4px  rgba(0,0,0,0.1);
+    transition: 1s;
+  }
+  .feature:hover {
+    transform:scale(1.1) ;
+  }
+
+  .feature .icon {
+    font-size: 50px;
+  }
+  .feature p {
+    color: rgba(0,0,0,0.5);
+  }
+  
+  /* About Section */
+  
+  .about {
+    background: white;
+    padding:50px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+  }
+  
+  
+  
+  @media (max-width: 1000px) {
+    .menu {
+      perspective: 800px;
+    }
+    [aria-controls="menu-list"] {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    .menu ul {
+      max-height: 0;
+      overflow: hidden;
+      transform: rotateX(90deg);
+      transition: all 0.5s;
+    }
+  
+    [aria-expanded="true"] ~ ul {
+      display: grid;
+      max-height: 500px;
+      transform: rotateX(0);
+    }
+  
+    [aria-expanded="false"] .close {
+      display: none;
+    }
+  
+    [aria-expanded="true"] .close {
+      display: inline-block;
+    }
+  
+    [aria-expanded="true"] .open {
+      display: none;
+    }
+  
+  }
+  
+   
+  @media (max-width: 700px) {
+    .top {
+      grid-template-areas:
+        "hero hero"
+        "cta1 cta2"
+    }
+    /* About */
+    .about {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .top {
+      grid-template-areas:
+        "hero"
+        "cta1"
+        "cta2"
+    }
+  }

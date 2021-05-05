@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style3.css">
+  <title>Food Plaza!</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+      <nav class="menu">
+          <button aria-expanded="false" aria-controls="menu-list">
+            <span class="open">☰</span>
+            <span class="close">×</span>
+            Menu
+          </button>
+          <ul id="menu-list">
+            <li>
+              <a href="Tacod.html" class="btnf btn6">Tacos</a>
+            </li>
+            <li>
+              <a href="Biriyanid.html" class="btnf btn2">Biriyani</a>
+            </li>
+            <li>
+              <a href="juiced.html" class="btnf btn3">Juices</a>
+            </li>
+            <li>
+              <a href="pizzad.html" class="btnf btn4" >Pizzas</a>
+            </li>
+            <li>
+              <a href="dessertd.html" class="btnf btn5">Desserts</a>
+            </li>
+          </ul>
+        </nav>
+    <div class="top">
+      <header class="hero">
+     
+        <h1>Food Plaza</h1>
+        <p class="name"> Good Food Good Mood!</p>
+      
+      </header> 
+      <div class="cta cta1">
+        <p class="price"><b>250/-</b></p>
+        <p class="name">Tacos</p>
+      </div>
+      <div class="cta cta2">
+        <p class="price"><b>190/-</b></p>
+        <p class="name">Dessert</p>
+      </div>
+
+    </div>
+
+    <section class="features">
+      <div class="feature">
+        <span class="icon">🌮</span>
+        <h3>Tacos</h3>
+        <p>If not for me being stoned and clinging to a taco, it would have been terribly romantic.</p>
+      </div>
+      <div class="feature">
+        <span class="icon"> 🍰 </span>
+        <h3>Dessert</h3>
+        <p>That's what dessert means to me: a dollop of sweet love in an otherwise cold world.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍷</span>
+        <h3>Juice</h3>
+        <p>In the midst of our daily lives, we must find the juice to nourish our creative souls.</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🍕</span>
+        <h3>Pizza</h3>
+        <p>There’s no better feeling in the world than a warm pizza box in your lap.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <img src="images/queso-taco.png" alt="Yummy Taco" class="about__mockup">
+      <div class="about__details">
+        <h2>Featured Taco</h2>
+        </br>
+        <p>Slim Profile, easy to hold and loaded with cheese.</p>
+        <p>This is the one you have been waiting for</p>
+        </br>
+        <button ><a href="Tacod.html"><b>Learn More →</b></a></button>
+      </div>
+    </section>
+  </div>
+
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Good food
+Good quality
+Good quantity
+True value for money
+Budgeted and the food quality is also so good.
+Taste wise one of the best
+Good delivery service .
+In all you will never be disappointed while getting food delivered from here .
+                    </p>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+        
+                    </div>
+                    <img src="images/user-1.png">
+                    <h3>Poushali Dasgupta</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>We have brought Chicken Biriyani and mango juice along with a chocolate brownie from this restaurant on 2nd March 2021 when i was in kolkata greater kailash one.
+The food is very tasty and reasonably prised and there is a take away facility also.
+
+
+                    </p>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+        
+                    </div>
+                    <img src="images/user-2.png">
+                    <h3>Suman Dey</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Nice tacos. No restaurant. I have ordered 3 tacos the price are reasonable according to the market. I have paid around 600 for it with dessert. Food are nice at given price . Specially the tacos are so yammy and the quality is also good.
+                    </p>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+        
+                    </div>
+                    <img src="images/user-3.png">
+                    <h3>Ankita Sen</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+  </script>
+<br>
+<br>
+
+<!-----------footer------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios Mobile Phone</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+               
+                <p>Our Purpose Is to Substainly Make the Pleasure and Benefits of Foods Accessible to
+                    the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021- @Minarva MD</p>
+    </div>
+</div>
+</body>
+
+</html>
